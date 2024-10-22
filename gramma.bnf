@@ -28,5 +28,27 @@
 
 
 
-<number_feat> ::= nf[0] | nf[1]
-<bool_feat> ::= bf[0] | bf[1]
+<number_feat> ::= 
+    nf[0] |
+    nf[1] |
+    nf[2] |
+    nf[3] |
+    nf[4] |
+    nf[5] |
+    nf[6]
+<bool_feat> ::= 
+    bf[0] |
+    bf[1] |
+    bf[2] |
+    bf[3] |
+    bf[4] |
+    bf[5] |
+    bf[6] |
+    bf[7] |
+    bf[8] |
+    bf[9] |
+    bf[10] |
+    bf[11] |
+    bf[12] |
+    bf[13] |
+    bf[14]

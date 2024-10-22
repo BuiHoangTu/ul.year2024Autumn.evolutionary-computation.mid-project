@@ -1,8 +1,8 @@
 <logic_op> ::= 
     <compare_op> | 
-    and(<logic_op>, <logic_op>) | 
-    or(<logic_op>, <logic_op>) |
-    not(<logic_op>) |
+    and_(<logic_op>, <logic_op>) | 
+    or_(<logic_op>, <logic_op>) |
+    not_(<logic_op>) |
     <bool_feat>
 
 <compare_op> ::=

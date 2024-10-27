@@ -19,6 +19,13 @@
     | sub(<number_value>, <number_value>)
     | mul(<number_value>, <number_value>)
     | div(<number_value>, <number_value>) 
+    | sqrt(<number_value>)
+    | sin(<number_value>)
+    | tanh(<number_value>)
+    | exp(<number_value>)
+    | log(<number_value>)
+    | neg(<number_value>)
+
 
 <number> ::= 
     <d>.<d><d><d><d>

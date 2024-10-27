@@ -1,53 +1,53 @@
 <logic_op> ::= 
-    <compare_op> | 
-    and_(<logic_op>, <logic_op>) | 
-    or_(<logic_op>, <logic_op>) |
-    not_(<logic_op>) |
-    <bool_feat>
+    <compare_op>
+    | and_(<logic_op>, <logic_op>)
+    | or_(<logic_op>, <logic_op>)
+    | not_(<logic_op>)
+    | <bool_feat>
 
 <compare_op> ::=
-    greater_than(<number_value>, <number_value>) |
-    less_than(<number_value>, <number_value>)
+    greater_than(<number_value>, <number_value>)
+    | less_than(<number_value>, <number_value>)
 
 <number_value> ::=
-    <number_op> |
-    <number_feat> |
-    <number>
+    <number_op>
+    | <number_feat>
+    | <number>
 
 <number_op> ::= 
-    add(<number_value>, <number_value>) |
-    sub(<number_value>, <number_value>) |
-    mul(<number_value>, <number_value>) |
-    div(<number_value>, <number_value>) 
+    add(<number_value>, <number_value>)
+    | sub(<number_value>, <number_value>)
+    | mul(<number_value>, <number_value>)
+    | div(<number_value>, <number_value>) 
 
 <number> ::= 
-    <d>.<d><d><d><d> |
-    -<d>.<d><d><d><d>
+    <d>.<d><d><d><d>
+    | -<d>.<d><d><d><d>
 
 <d> ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 
 
 
 <number_feat> ::= 
-    nf[0] |
-    nf[1] |
-    nf[2] |
-    nf[3] |
-    nf[4] |
-    nf[5] |
-    nf[6]
+    nf[0]
+    | nf[1]
+    | nf[2]
+    | nf[3]
+    | nf[4]
+    | nf[5]
+    | nf[6]
 <bool_feat> ::= 
-    bf[0] |
-    bf[1] |
-    bf[2] |
-    bf[3] |
-    bf[4] |
-    bf[5] |
-    bf[6] |
-    bf[7] |
-    bf[8] |
-    bf[9] |
-    bf[10] |
-    bf[11] |
-    bf[12] |
-    bf[13]
+    bf[0]
+    | bf[1]
+    | bf[2]
+    | bf[3]
+    | bf[4]
+    | bf[5]
+    | bf[6]
+    | bf[7]
+    | bf[8]
+    | bf[9]
+    | bf[10]
+    | bf[11]
+    | bf[12]
+    | bf[13]

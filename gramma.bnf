@@ -1,53 +1,54 @@
-<logic_op> ::= 
-    <compare_op>
-    | and_(<logic_op>, <logic_op>)
-    | or_(<logic_op>, <logic_op>)
-    | not_(<logic_op>)
-    | <bool_feat>
+<model> ::= createXGBClassifier( 
+    <n_estimators>, 
+    <max_depth>,
+    <max_leaves>,
+    <max_bin>,
+    <grow_policy>,
+    <learning_rate>,
+    <verbosity>,
+    <booster>,
+    <base_score>,
+    <validate_parameters>,
+    <gamma>,
+    <min_child_weight>,
+    <max_delta_step>,
+    <subsample>,
+    <sampling_method>,
+    <colsample_bytree>,
+    <colsample_bylevel>,
+    <colsample_bynode>,
+    <reg_alpha>,
+    <reg_lambda>,
+    <scale_pos_weight>,
+    <num_parallel_tree>,
+    <importance_type>,
+    <eval_metric>,
+    <early_stopping_rounds>,
+)
 
-<compare_op> ::=
-    greater_than(<number_value>, <number_value>)
-    | less_than(<number_value>, <number_value>)
+<n_estimators> ::= 50 | 100 | 150 | 200 | 250 | 300 | 400
+<max_depth> ::= 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+<max_leaves> ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+<max_bin> ::= 2 | 4 | 8 | 16 | 32 | 64
+<grow_policy> ::= 'depthwise' | 'lossguide'
+<learning_rate> ::= 0.001 | 0.01 | 0.05 | 0.1 | 0.2 | 0.3
+<verbosity> ::= 0 | 1 | 2 | 3
+<booster> ::= 'gbtree' | 'gblinear' | 'dart'
+<base_score> ::= 0.5 | 1.0
+<validate_parameters> ::= True | False
 
-<number_value> ::=
-    <number_op>
-    | <number_feat>
-    | <number>
-
-<number_op> ::= 
-    add(<number_value>, <number_value>)
-    | sub(<number_value>, <number_value>)
-    | mul(<number_value>, <number_value>)
-    | div(<number_value>, <number_value>) 
-
-<number> ::= 
-    <d>.<d><d><d><d>
-    | -<d>.<d><d><d><d>
-
-<d> ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
-
-
-
-<number_feat> ::= 
-    nf[0]
-    | nf[1]
-    | nf[2]
-    | nf[3]
-    | nf[4]
-    | nf[5]
-    | nf[6]
-<bool_feat> ::= 
-    bf[0]
-    | bf[1]
-    | bf[2]
-    | bf[3]
-    | bf[4]
-    | bf[5]
-    | bf[6]
-    | bf[7]
-    | bf[8]
-    | bf[9]
-    | bf[10]
-    | bf[11]
-    | bf[12]
-    | bf[13]
+<gamma> ::= 0 | 0.1 | 0.2 | 0.3 | 0.4 | 0.5
+<min_child_weight> ::= 1 | 2 | 3 | 4 | 5
+<max_delta_step> ::= 0 | 1 | 2 | 3
+<subsample> ::= 0.6 | 0.7 | 0.8 | 0.9 | 1.0
+<sampling_method> ::= 'uniform' | 'gradient_based'
+<colsample_bytree> ::= 0.5 | 0.6 | 0.7 | 0.8 | 0.9 | 1.0
+<colsample_bylevel> ::= 0.5 | 0.6 | 0.7 | 0.8 | 0.9 | 1.0
+<colsample_bynode> ::= 0.5 | 0.6 | 0.7 | 0.8 | 0.9 | 1.0
+<reg_alpha> ::= 0 | 0.1 | 0.5 | 1.0
+<reg_lambda> ::= 1.0 | 1.5 | 2.0 | 2.5 | 3.0
+<scale_pos_weight> ::= 1.0 | 2.0 | 3.0
+<num_parallel_tree> ::= 1 | 2 | 3 | 4
+<importance_type> ::= 'weight' | 'gain' | 'cover' | 'total_gain' | 'total_cover'
+<eval_metric> ::= 'mae' | 'rmse' | 'logloss' | 'error' | None
+<early_stopping_rounds> ::= 10 | 20 | 30 | 40 | 50

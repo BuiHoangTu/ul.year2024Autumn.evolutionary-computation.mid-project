@@ -1,30 +1,36 @@
-<model> ::= createXGBClassifier( 
-    n_estimators=<n_estimators>, 
-    max_depth=<max_depth>,
-    max_leaves=<max_leaves>,
-    max_bin=<max_bin>,
-    grow_policy=<grow_policy>,
-    learning_rate=<learning_rate>,
-    verbosity=<verbosity>,
-    booster=<booster>,
-    base_score=<base_score>,
-    validate_parameters=<validate_parameters>,
-    gamma=<gamma>,
-    min_child_weight=<min_child_weight>,
-    max_delta_step=<max_delta_step>,
-    subsample=<subsample>,
-    sampling_method=<sampling_method>,
-    colsample_bytree=<colsample_bytree>,
-    colsample_bylevel=<colsample_bylevel>,
-    colsample_bynode=<colsample_bynode>,
-    reg_alpha=<reg_alpha>,
-    reg_lambda=<reg_lambda>,
-    scale_pos_weight=<scale_pos_weight>,
-    num_parallel_tree=<num_parallel_tree>,
-    importance_type=<importance_type>,
-    eval_metric=<eval_metric>,
-    early_stopping_rounds=<early_stopping_rounds>,
-)
+<start> ::= config.<config_update>
+
+<config_update> ::= 
+    setValue(<config_option>)
+    | <config_update>.<config_update>
+ 
+
+
+<config_option> ::= 
+    'n_estimators', <n_estimators>
+    | 'max_depth', <max_depth>
+    | 'max_leaves', <max_leaves>
+    | 'max_bin', <max_bin>
+    | 'grow_policy', <grow_policy>
+    | 'learning_rate', <learning_rate>
+    | 'booster', <booster>
+    | 'base_score', <base_score>
+    | 'gamma', <gamma>
+    | 'min_child_weight', <min_child_weight>
+    | 'max_delta_step', <max_delta_step>
+    | 'subsample', <subsample>
+    | 'sampling_method', <sampling_method>
+    | 'colsample_bytree', <colsample_bytree>
+    | 'colsample_bylevel', <colsample_bylevel>
+    | 'colsample_bynode', <colsample_bynode>
+    | 'reg_alpha', <reg_alpha>
+    | 'reg_lambda', <reg_lambda>
+    | 'scale_pos_weight', <scale_pos_weight>
+    | 'num_parallel_tree', <num_parallel_tree>
+    | 'importance_type', <importance_type>
+    | 'eval_metric', <eval_metric>
+
+
 
 <n_estimators> ::= 50 | 100 | 150 | 200 | 250 | 300 | 400
 <max_depth> ::= 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
@@ -32,10 +38,8 @@
 <max_bin> ::= 2 | 4 | 8 | 16 | 32 | 64
 <grow_policy> ::= 'depthwise' | 'lossguide'
 <learning_rate> ::= 0.001 | 0.01 | 0.05 | 0.1 | 0.2 | 0.3
-<verbosity> ::= 0 | 1 | 2 | 3
 <booster> ::= 'gbtree' | 'gblinear' | 'dart'
 <base_score> ::= 0.5 | 1.0
-<validate_parameters> ::= True | False
 
 <gamma> ::= 0 | 0.1 | 0.2 | 0.3 | 0.4 | 0.5
 <min_child_weight> ::= 1 | 2 | 3 | 4 | 5
@@ -50,5 +54,4 @@
 <scale_pos_weight> ::= 1.0 | 2.0 | 3.0
 <num_parallel_tree> ::= 1 | 2 | 3 | 4
 <importance_type> ::= 'weight' | 'gain' | 'cover' | 'total_gain' | 'total_cover'
-<eval_metric> ::= 'mae' | 'rmse' | 'logloss' | 'error' | None
-<early_stopping_rounds> ::= 10 | 20 | 30 | 40 | 50
+<eval_metric> ::= 'mae' | 'rmse' | 'logloss' | 'error' 

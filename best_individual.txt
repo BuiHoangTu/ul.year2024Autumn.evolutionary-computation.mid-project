@@ -1,1 +1,1 @@
-and_(or_(and_(and_(bf[2], bf[1]), or_(bf[12], bf[0])), and_(bf[5], not_(greater_than(mul(nf[6], nf[5]), nf[2])))), and_(less_than(sub(nf[2], mul(add(add(nf[1], 3.5553), sub(-2.0218, nf[6])), nf[5])), nf[2]), not_(less_than(sub(nf[2], mul(add(add(nf[6], 3.5553), sub(-2.6848, nf[0])), nf[5])), -0.8999))))
+config.setValue('max_leaves', 3)

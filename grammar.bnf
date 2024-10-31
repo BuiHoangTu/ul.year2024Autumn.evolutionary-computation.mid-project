@@ -1,0 +1,19 @@
+<x> ::= self.creator.getLayer(<layer_name>)(<x>)
+    | self.creator.getLayer(<layer_name_input>)(input)
+    | torch.cat((<xs>), dim=1)
+
+<xs> ::= <x> | <x>, <xs>
+
+<layer_name> ::= "linear_<layer_size>_<layer_size>_<layer_id>"
+    | "batchnorm_<layer_size>_<layer_id>"
+    | "dropout_<drop_rate>_<layer_id>"
+
+<layer_name_input> ::= "linear_" + len(input) + "_<layer_size>_<layer_id>"
+    | "batchnorm_" + len(input) + "_<layer_id>"
+    | "dropout_<drop_rate>_<layer_id>"
+
+<layer_size> ::= 2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 | 18 | 20 | 22 | 24 | 26 | 28 | 30 | 32 
+
+<drop_rate> ::= 0.1 | 0.2 | 0.3 | 0.4 | 0.5
+
+<layer_id> ::= a | b | c | d | e

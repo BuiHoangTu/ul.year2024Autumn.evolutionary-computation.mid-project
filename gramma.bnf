@@ -2,6 +2,7 @@
     <compare_op>
     | and_(<logic_op>, <logic_op>)
     | or_(<logic_op>, <logic_op>)
+    | xor(<logic_op>, <logic_op>)
     | not_(<logic_op>)
     | <bool_feat>
 
@@ -13,12 +14,18 @@
     <number_op>
     | <number_feat>
     | <number>
+    | <logic_op>
 
 <number_op> ::= 
     add(<number_value>, <number_value>)
     | sub(<number_value>, <number_value>)
     | mul(<number_value>, <number_value>)
     | div(<number_value>, <number_value>) 
+    | sigmoid(<number_value>)
+    | tanh(<number_value>)
+    | relu(<number_value>)
+    | swish(<number_value>)
+    | np.where((<logic_op>), (<number_value>), (<number_value>))
 
 <number> ::= 
     <d>.<d><d><d><d>

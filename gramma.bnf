@@ -9,6 +9,7 @@
 <compare_op> ::=
     greater_than(<number_value>, <number_value>)
     | less_than(<number_value>, <number_value>)
+    | in_range(<number_value>, <number_value>, <number_value>)
 
 <number_value> ::=
     <number_op>
@@ -21,6 +22,7 @@
     | sub(<number_value>, <number_value>)
     | mul(<number_value>, <number_value>)
     | div(<number_value>, <number_value>) 
+    | abs(<number_value>)
     | sigmoid(<number_value>)
     | tanh(<number_value>)
     | relu(<number_value>)

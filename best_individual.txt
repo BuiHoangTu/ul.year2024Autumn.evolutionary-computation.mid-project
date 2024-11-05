@@ -1,1 +1,3 @@
-sub(tanh(tanh(nf[0])), sub(sub(nf[6], np.where((not_(bf[0])), (-0.5044), (np.where((not_(bf[2])), (-0.6394), (nf[2]))))), np.where((not_(bf[1])), (np.where((not_(bf[5])), (tanh(-0.6040)), (nf[2]))), (np.where((not_(bf[1])), (np.where((not_(bf[5])), (tanh(-0.6040)), (nf[2]))), (np.where((not_(bf[1])), (-0.4120), (np.where((not_(bf[5])), (abs(nf[2])), (np.where((not_(bf[5])), (abs(nf[1])), (tanh(add(0.6946, nf[6]))))))))))))))
+mul(sub(nf[2], sub(xor(not_(bf[13]), xor(bf[0], and_(bf[2], or_(bf[11], xor(not_(bf[1]), xor(not_(or_(bf[5], xor(bf[4], bf[0]))), bf[13])))))), sub(nf[2], sub(xor(not_(bf[13]), xor(bf[0], bf[13])), sub(nf[2], sub(sub(sigmoid(nf[6]), sub(nf[2], swish(sub(1.6032, nf[0])))), nf[1])))))), sigmoid(tanh(in_range(nf[2], bf[13], sub(nf[5], nf[2])))))
+
+Training Fitness:  (np.float64(0.16978054588703123), np.float64(0.8021838885585817))

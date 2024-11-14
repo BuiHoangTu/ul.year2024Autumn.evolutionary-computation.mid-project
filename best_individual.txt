@@ -1,3 +1,3 @@
-mul(sub(nf[2], sub(xor(not_(bf[13]), xor(bf[0], and_(bf[2], or_(bf[9], xor(not_(bf[1]), xor(not_(or_(bf[5], xor(bf[4], bf[0]))), bf[13])))))), sub(nf[2], sub(xor(not_(bf[13]), xor(bf[0], bf[13])), sub(nf[2], sub(sub(relu(nf[1]), sub(nf[2], swish(sub(1.6648, nf[0])))), nf[1])))))), sigmoid(mul(in_range(nf[2], -6.6429, bf[8]), nf[6])))
+add(sub(nf[0], sub(div(nf[5], bf[1]), nf[1])), sub(nf[2], sub(div(relu(relu(nf[1])), bf[0]), greater_than(nf[2], add(sub(swish(relu(nf[0])), greater_than(nf[2], sigmoid(sub(div(swish(nf[1]), bf[1]), greater_than(nf[1], sub(nf[2], sigmoid(sub(swish(swish(nf[1])), or_(not_(bf[5]), greater_than(nf[3], nf[3])))))))))), or_(or_(bf[8], xor(xor(bf[3], greater_than(nf[1], sub(nf[2], sigmoid(sub(swish(swish(nf[4])), nf[6]))))), bf[4])), greater_than(nf[0], nf[1])))))))
 
-Training Fitness:  (np.float64(0.1677668261381584), np.float64(0.8021838885585817))
+Training Fitness:  (np.float64(0.1704317056697672), np.float64(0.8909031788043871))

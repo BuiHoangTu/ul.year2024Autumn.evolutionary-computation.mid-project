@@ -232,7 +232,13 @@ In this section, I will explain the grammar used to generate the classification 
 This section presents the evaluation results of the evolutionary model on the training and test datasets, with accuracy as the primary performance metric.
 
 After training the model for 200 generations with the setup described in Section \ref{subsec:training-process}, the best program found by the evolutionary algorithm achieved an accuracy of 0.7467 on the training data and 0.6985 on the test data. The model utilizes 21 features and achieved a mean squared error (MSE) of 0.1677 on the training data.
-To better understand the model's performance across generations, we tracked the error rate (mean squared error) and number of features used for each generation during training. 
+The best program found by the evolutionary algorithm is:
+\begin{lstlisting}[language=Python, caption={Best Program Found by the Evolutionary Algorithm}, label={lst:best-program}]
+    mul(sub(nf[2], sub(xor(not_(bf[13]), xor(greater_than(bf[2], not_(bf[1])), xor(not_(or_(bf[5], xor(bf[4], not_(in_range(nf[1], bf[2], sub(xor(not_(bf[13]), xor(bf[10], bf[13])), sub(nf[2], sub(sub(abs(nf[1]), sub(nf[2], -0.9059)), not_(or_(bf[5], or_(bf[5], xor(bf[4], bf[0])))))))))))), bf[13]))), sub(nf[2], sub(xor(not_(bf[13]), xor(bf[0], bf[13])), sub(nf[2], sub(sub(abs(swish(nf[1])), sub(nf[2], swish(sub(1.8002, nf[0])))), nf[1])))))), sigmoid(swish(nf[6])))
+\end{lstlisting}
+
+
+To better understand the model's performance across generations, I tracked the error rate (mean squared error) and number of features used for each generation during training. 
 Figure \ref{fig:error-rate-plot} and Figure \ref{fig:feature-plot} show the progression of the error rate and number of features used over the course of the training process.
 \begin{figure}[h] 
     \centering 

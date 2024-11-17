@@ -1,5 +1,5 @@
 mul(sub(nf[2], sub(xor(not_(bf[13]), xor(greater_than(bf[2], not_(bf[1])), xor(not_(or_(bf[5], xor(bf[4], not_(in_range(nf[1], bf[2], sub(xor(not_(bf[13]), xor(bf[10], bf[13])), sub(nf[2], sub(sub(abs(nf[1]), sub(nf[2], -0.9059)), not_(or_(bf[5], or_(bf[5], xor(bf[4], bf[0])))))))))))), bf[13]))), sub(nf[2], sub(xor(not_(bf[13]), xor(bf[0], bf[13])), sub(nf[2], sub(sub(abs(swish(nf[1])), sub(nf[2], swish(sub(1.8002, nf[0])))), nf[1])))))), sigmoid(swish(nf[6])))
 
-Training Fitness:  (np.float64(0.16772860928826896), np.float64(0.6681877721681662))
+Training Fitness:  (np.float64(0.16772860928826896), np.float64(0.9995473777767595))
 
 Training Accuracy:  0.7467274890916303
